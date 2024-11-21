@@ -76,7 +76,7 @@ def main():
 
         if opcion == 1:
             print("\n--- EDO de Primer Orden ---")
-            ecuacion_input = input("Ingresa la ecuación en la forma dy/dx = f(x, y), ejemplo dy/dx = x**2 - 3*y: ")
+            ecuacion_input = input("Ingresa la ecuación en la forma dy/dx = f(x, y), ejemplo x**2 - 3*y: ")
             f = procesar_ecuacion(ecuacion_input, ["x", "y"])
             y0 = float(input("Ingresa la condición inicial y(x0): "))
             x0 = float(input("Ingresa el valor inicial de x (x0): "))
@@ -96,7 +96,7 @@ def main():
 
         elif opcion == 2:
             print("\n--- EDO de Segundo Orden ---")
-            ecuacion_input = input("Ingresa la ecuación en la forma d^2y/dx^2 = f(x, y, dy/dx), ejemplo: d^2y/dx^2 = sin(x) - cos(y) + dy_dx: ")
+            ecuacion_input = input("Ingresa la ecuación en la forma d^2y/dx^2 = f(x, y, dy/dx), ejemplo: sin(x) - cos(y) + dy_dx: ")
             f = procesar_ecuacion(ecuacion_input, ["x", "y", "dy_dx"])
             y0 = float(input("Ingresa la condición inicial y(x0): "))
             dy_dx0 = float(input("Ingresa la condición inicial y'(x0): "))
@@ -119,7 +119,7 @@ def main():
 
         elif opcion == 3:
             print("\n--- Sistema de EDOs ---")
-            ecuaciones_input = input("Ingresa las ecuaciones separadas por comas (por ejemplo, '3*x + 5*y + sin(t), -2*x + 4*y + cos(t)'): ")
+            ecuaciones_input = input("Ingresa las ecuaciones separadas por comas (por ejemplo, 3*x + 5*y + sin(t), -2*x + 4*y + cos(t): ")
             fns = procesar_sistema(ecuaciones_input)
             y0 = list(map(float, input("Ingresa las condiciones iniciales (por ejemplo, 'x0, y0'): ").split(",")))
             t0 = float(input("Ingresa el valor inicial de t (t0): "))
